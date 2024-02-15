@@ -15,19 +15,20 @@ def isWinner(x, nums):
     a[0], a[1] = 0, 0
 
     for i in range(2, len(a)):
-        rm_multiples(a, i)    
+        rm_multiples(a, i)
 
     for i in nums:
         if sum(a[0:i + 1]) % 2 == 0:
             ben += 1
         else:
             maria += 1
-    
+
     if ben > maria:
         return "Ben"
     if maria > ben:
         return "Maria"
     return None
+
 
 def rm_multiples(ls, x):
     """REMOVES MULTIPLES OF A PRIME NUMBER"""
